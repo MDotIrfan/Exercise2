@@ -1,0 +1,109 @@
+body {
+	margin: 0;
+}
+.main {
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  position: fixed;
+  top: 70px;
+  left: 450px;
+  width: 500px;
+  height: 500px;
+}
+
+.merk {
+	display: inline;
+	font-size: 30px;
+	color: #002db3;
+	font-weight: bold;
+}
+
+.box {
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 5px;
+  display: inline;
+  z-index: 1;
+}
+
+.hitung
+{
+  width: 499px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: none;
+  color: grey;
+  text-align: right;
+  float: right;
+  margin-top: 10px;
+}
+
+.input {
+	font-size: 30px;
+	  width: 499px;
+	  padding: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+   text-align: right;
+  float: right;
+  margin-bottom: 10px;
+}
+
+.input:focus {
+  border-bottom: 2px solid red;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+  margin: 10px;
+}
+
+.nomer {
+ background-color: #3377ff;
+}
+
+.nomer:hover {background-color: #0055ff}
+
+.hapus {
+ background-color: #e60000;
+}
+
+.hapus:hover {background-color: #b30000}
+
+.oke {
+ background-color: #4CAF50;
+ height: 150px;
+}
+
+.oke:hover {background-color: #3e8e41}
+
+.opr {
+ background-color: #ff6600;
+}
+
+.opr:hover {background-color: #cc5200}
+
+.koma {
+	background-color: #009999;
+}
+
+.koma:hover {background-color: #006666}
+
+button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
