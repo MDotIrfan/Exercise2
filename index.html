@@ -1,53 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Kalkulator</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-	<div class="main">
-		<div class="merk">Calculate Or</div>
-		<div class="box" style="background-color: #CC142E"></div>
-		<div class="box" style="background-color: #FF5440"></div>
-		<div class="box" style="background-color: #00FFC4"></div>
-		<div class="box" style="background-color: #3D7C99"></div>
-		<div class="box" style="background-color: #1493CC"></div>
-	<form>
-	<table>
-		<tr>
-			<td colspan="5"><input type="text" id="hitung" value="" readonly="true" class="hitung"></td>
-		</tr>
-		<td colspan="5"><input type="text" id="input" value="" class="input"></td>
-		<tr>
-			<td><button type="button" onclick="angka(7)" class="nomer">7</button></td>
-			<td><button type="button" onclick="angka(8)" class="nomer">8</button></td>
-			<td><button type="button" onclick="angka(9)" class="nomer">9</button></td>
-			<td><button type="button" onclick="opr(1)" class="opr">+</button></td>
-			<td><button type="button" onclick="kurung(1)" class="opr">(</button></td>
-		</tr>
-		<tr>
-			<td><button type="button" onclick="angka(4)" class="nomer">4</button></td>
-			<td><button type="button" onclick="angka(5)" class="nomer">5</button></td>
-			<td><button type="button" onclick="angka(6)" class="nomer">6</button></td>
-			<td><button type="button" onclick="opr(2)" class="opr">-</button></td>
-			<td><button type="button" onclick="kurung(2)" class="opr">)</button></td>
-		</tr>
-		<tr>
-			<td><button type="button" onclick="angka(1)" class="nomer">1</button></td>
-			<td><button type="button" onclick="angka(2)" class="nomer">2</button></td>
-			<td><button type="button" onclick="angka(3)" class="nomer">3</button></td>
-			<td><button type="button" onclick="opr(3)" class="opr">X</button></td>
-			<td rowspan="2"><button type="button" onclick="hasil()" class="oke">=</button></td>
-		</tr>
-		<tr>
-			<td><button type="button" onclick="angka(0)" class="nomer">0</button></td>
-			<td><button type="button" onclick="koma()" class="koma">.</button></td>
-			<td><button type="button" onclick="hapus()"  class="hapus">C</button></td>
-			<td><button type="button" onclick="opr(4)" class="opr">:</button></td>
-		</tr>
-	</table>
-	</form>
-	</div>
-<script type="text/javascript" src="script.js"></script>
+    <div class="main">
+        <div class="merk">Calculate Or</div>
+        <div class="box" style="background-color: #CC142E"></div>
+        <div class="box" style="background-color: #FF5440"></div>
+        <div class="box" style="background-color: #00FFC4"></div>
+        <div class="box" style="background-color: #3D7C99"></div>
+        <div class="box" style="background-color: #1493CC"></div>
+        <form>
+            <table>
+                <tr>
+                    <td colspan="5">
+                        <input type="text" id="hitung" value="" readonly="true" class="hitung">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <input type="text" id="input" value="" class="input" onkeypress="return isNumberKey(event)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="angka(7)" class="nomer">7</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="angka(8)" class="nomer">8</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="angka(9)" class="nomer">9</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="opr(1)" class="opr">+</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="kurung(1)" class="opr">(</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="angka(4)" class="nomer">4</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="angka(5)" class="nomer">5</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="angka(6)" class="nomer">6</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="opr(2)" class="opr">-</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="kurung(2)" class="opr">)</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="angka(1)" class="nomer">1</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="angka(2)" class="nomer">2</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="angka(3)" class="nomer">3</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="opr(3)" class="opr">X</button>
+                    </td>
+                    <td rowspan="2">
+                        <button type="button" onclick="hasil()" class="oke">=</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="angka(0)" class="nomer">0</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="koma()" class="koma">.</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="hapus()" class="hapus">C</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="opr(4)" class="opr">:</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
